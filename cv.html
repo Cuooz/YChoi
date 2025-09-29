@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV Website</title>
+    <style>
+        /* 기본 스타일 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        /* 전체 화면 공통 */
+        body {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            background-color: #f4f4f4;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* 첫 화면: 서명 */
+        .intro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300%;
+            height: 300vh;
+            background-color: white;
+            cursor: pointer;
+            transition: opacity 0.7s ease-in-out;
+        }
+
+        .intro h1 {
+            font-size: 50px;
+            font-family: 'Brush Script MT', cursive;
+            color: #176feb
+            text-align: center;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .intro:hover h1 {
+            transform: scale(1.1);
+        }
+
+        /* 메인 페이지 (초기에는 숨김) */
+        .main {
+            display: none;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* 사이드바 */
+        .sidebar {
+            width: 250px;
+            background-color: white;
+            color: #138acf;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+	    border: 1px #6b4b1d;      
+    	    border-radius: 20px;            
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: Black;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background-color: #1abc9c;
+        }
+
+        /* 메인 콘텐츠 */
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: white;
+            border-left: 5px solid #2c3e50;
+            overflow-y: auto;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 첫 화면: 서명 -->
+    <div class="intro" id="intro">
+        <h1 id="signature">Choi</h1>
+    </div>
+
+    <!-- 메인 페이지 -->
+    <div class="main" id="main">
+        <nav class="sidebar">
+            <h2>My Profile</h2>
+            <ul>
+                <li><a href="#" class="tab-link active" data-tab="cv">📄 CV</a></li>
+                <li><a href="#" class="tab-link" data-tab="publications">📚 Publications</a></li>
+                <li><a href="#" class="tab-link" data-tab="research">🔬 Research Interests</a></li>
+                <li><a href="#" class="tab-link" data-tab="contact">📧 Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div id="cv" class="tab-content active">
+                <h2>📄 Curriculum Vitae</h2>
+                <p>여기에 CV 내용을 입력하세요.</p>
+            </div>
+            <div id="publications" class="tab-content">
+                
+<h2>📚 Publications</h2>
+
+<h2>📚 Publications</h2>
+
+ <!-- 2025년 출판물 -->
+    <div class="year-section">
+        <h3>2025</h3>
+        <ul>
+            <li class="publication">
+                <p> Park, B.S., Yoon, J, Lee, J.-M., Cho, S.H., <strong> Choi, Y., </strong> Cho, B.K., Oh, M.K. (2024). 
+		"<em> Metabolic engineering of Priestia megaterium for 2'-fucosyllactose production. </em>" 
+		<span class="journal"> Microb Cell Fact. </span> 24,2.  
+		<a href="https://doi.org/10.1186/s12934-024-02620-w" target="_blank">[DOI]</a></p>
+            </li>
+	</ul>
+    </div>     
+
+
+<!-- 2024년 출판물 -->
+    <div class="year-section">
+        <h3>2024</h3>
+        <ul>            
+ <li class="publication">
+                <p> Choe, K.W., <strong> Choi, Y., </strong> Lim, Y.K., Kweon, O.J., Han, H.S., Park, K.Y., Seo, S.J., Lee, M.K. (2024). 
+		"<em> The First Report of Onychomycosis Caused by Elsinoë Species. </em>" 
+		<span class="journal"> Lab Med Online. </span> 14:56-59. 
+		<a href="https://doi.org/10.47429/lmo.2024.14.1.56" target="_blank">[DOI]</a></p>
+          </li>
+	</ul>
+    </div>     
+
+ <!-- 2023년 출판물 -->
+    <div class="year-section">
+        <h3>2023</h3>
+        <ul>
+            <li class="publication">
+                <p> Park, J.W., Han, H.S., <strong>Choi, Y.,</strong> Seo, S.J., Park, K.Y., Lee, M.K. (2023). 
+		"<em> Contamination Leading to Pseudo-Outbreak of Cladosporium species from the Department of Dermatology. </em>" 
+		<span class="journal"> Ann Dermatol. </span> 2023;35(Suppl 2):S335-S337. 
+		<a href="https://doi:10.5021/ad.21.251" target="_blank">[DOI]</a></p>
+            </li>
+
+ <li class="publication">
+                <p> Kwon, O. J., Lim, Y. K., <strong> Choi, Y., </strong> Lee, S., Park, M. S., Suh, I. B., Kim, H., Jee, Y. S., & Lee, M. K.  (2023). 
+		"<em> Performance evaluation of newly developed surrogate virus neutralization tests for detecting neutralizing antibodies against SARS-CoV-2. </em>" 
+		<span class="journal"> Sci Rep. </span> 1. 13(1), 4961. 
+		<a href="https://doi.org/10.1038/s41598-023-31114-9" target="_blank">[DOI]</a></p>
+          </li>
+	</ul>
+    </div>     
+
+
+    <!-- 2022년 출판물 -->
+    <div class="year-section">
+        <h3>2022</h3>
+        <ul>
+            <li class="publication">
+                <p> <strong>Choi, Y.,</strong> Kim, D., Choe, K. W., Lee, H., Kim, J. S., Ahn, J. Y., & Lee, M. K. (2022). 
+		"<em> Performance Evaluation of Bruker Biotyper, ASTA MicroIDSys, and VITEK-MS and Three Extraction Methods for Filamentous Fungal Identification in Clinical Laboratories. </em>" 
+		<span class="journal"> J of Clin Microbiol. </span> 60(11). 
+		<a href=" https://doi.org/10.1128/jcm.00812-22" target="_blank">[DOI]</a></p>
+            </li>
+
+  <li class="publication">
+                <p> <strong>Choi, Y.,</strong> Park, K.Y., Han, H.S., Lee, M.K., Seo, S.J. (2022). 
+		"<em> Comparative Analysis of Cutaneous Fungi in Atopic Dermatitis Patients and Healthy Individuals. </em>" 
+		<span class="journal"> Ann Dermatol. </span> 34(2):118-124. 
+		<a href="https://doi.org/10.5021/ad.2022.34.2.118" target="_blank">[DOI]</a></p>
+            </li>
+
+<li class="publication">
+                <p> Yoon, S., <strong> Choi, Y.J., </strong> Lim, Y.K. Kweon, O.J., Kim, H.R., Kim, T.H & Lee, M.K., (2022). 
+		"<em> Prevalence and detection of Tropheryma whipplei in the stools of Korean patients with diarrhea using real-time PCRs. </em>" 
+		<span class="journal"> Ann Clin Microbiol Antimicrob. </span>  
+		<a href="https://doi.org/10.1186/s12941-022-00543-1" target="_blank">[DOI]</a></p>
+            </li>
+
+<li class="publication">
+                <p> 1. Lim, Y.K., Kweon, O.J., <strong> Choi, Y., </strong> Kim, T.H., Lee, M.K. (2022). 
+		"<em> Evaluation of ichroma™COVID-19 interferon gamma release assay for detection of vaccine-induced immunity in healthcare workers. </em>" 
+		<span class="journal"> Clin Chem Lab Med. </span> 61(3):503-509 
+		<a href="https://doi:10.1515/cclm-2022-0914" target="_blank">[DOI]</a></p>
+            </li>
+	</ul>
+    </div>     
+
+
+    <!-- 2021년 출판물 -->
+    <div class="year-section">
+        <h3>2021</h3>
+        <ul>
+            <li class="publication">
+                <p> Kim, D., Song, M., Do, E., <strong> Choi, Y.,</strong> Kronstad, J. W., & Jung, W. H. (2021). 
+		"<em> Oxidative Stress Causes Vacuolar Fragmentation in the Human Fungal Pathogen Cryptococcus neoformans. </em>" 
+		<span class="journal"> J Fungi. </span> 7(7), 523. 
+		<a href=" https://doi.org/10.3390/jof7070523" target="_blank">[DOI]</a></p>
+            </li>
+
+<li class="publication">
+                <p> Kweon, O.J., Lim, Y.K., Kim, H.R., <strong>Choi, Y., </strong> Kim, M.C., Choi, S.H., Chung, J.W., Lee, M.K. (2021). 
+		"<em> Evaluation of rapid SARS-CoV-2 antigen tests, AFIAS COVID-19 Ag and ichroma COVID-19 Ag, with serial nasopharyngeal specimens from COVID-19 patients. </em>" 
+		<span class="journal"> PLoS One. </span> 8;16(4):e0249972. 
+		<a href=" https://10.1371/journal.pone.0249972" target="_blank">[DOI]</a></p>
+            </li>
+	</ul>
+    </div>     
+
+<!-- 2020년 출판물 -->
+    <div class="year-section">
+        <h3>2020</h3>
+        <ul>
+            <li class="publication">
+                <p> <strong> Choi, Y., </strong> Do, E., Hu, G., Caza, M., Horianopoulos, L. C., Kronstad, J. W., & Jung, W. H. (2020). 
+		"<em> Involvement of Mrs3/4 in Mitochondrial Iron Transport and Metabolism in Cryptococcus neoformans. </em>" 
+		<span class="journal"> J Microbiol Biotechnol. </span> 30(8), 1142-1148 
+		<a href=" https://doi.org/10.4014/jmb.2004.04041" target="_blank">[DOI]</a></p>
+            </li>
+	</ul>
+    </div>     
+
+<!-- 2018년 출판물 -->
+    <div class="year-section">
+        <h3>2018</h3>
+        <ul>
+            <li class="publication">
+                <p> Kim, M., Cho, Y. J., Park, M., <strong> Choi, Y.,</strong> Hwang, S. Y., & Jung, W. H. (2018).
+		"<em> Genomic Tandem Quadruplication is Associated with Ketoconazole Resistance in Malassezia pachydermatis. </em>" 
+		<span class="journal"> J Microbiol Biotechnol. </span> 28(11), 1937-1945 
+		<a href=" https://doi.org/10.4014/jmb.1810.10019" target="_blank">[DOI]</a></p>
+            </li>
+	</ul>
+    </div>      
+
+        
+            <div id="research" class="tab-content">
+                <h2>🔬 Research Interests</h2>
+                <p>연구 관심 분야를 여기에 추가하세요.</p>
+            </div>
+            <div id="contact" class="tab-content">
+                <h2>📧 Contact</h2>
+                <p>이메일이나 연락처 정보를 추가하세요.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 서명을 클릭하면 메인 페이지로 이동
+        document.getElementById("intro").addEventListener("click", function() {
+            document.getElementById("intro").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("intro").style.display = "none";
+                document.getElementById("main").style.display = "flex";
+            }, 500);
+        });
+
+        // 탭 클릭 이벤트 (기존 기능 유지)
+        document.querySelectorAll(".tab-link").forEach(tab => {
+            tab.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                document.querySelectorAll(".tab-link").forEach(t => t.classList.remove("active"));
+                document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+
+                this.classList.add("active");
+                document.getElementById(this.dataset.tab).classList.add("active");
+            });
+        });
+    </script>
+
+</body>
+</html>
